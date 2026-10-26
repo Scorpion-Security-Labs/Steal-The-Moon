@@ -9,7 +9,22 @@ from Crypto.Cipher import AES
 
 description = """
 Authenticated remote command execution for the Davolink Minion router series.
+Tested on firmware version 1.00.04.
 """
+
+'''
+Note that this vulnerability targets a vulnerability present in the 1.00.04
+firmware version, released during or prior to 2023. The latest (as of 2026)
+firmware version is 1.00.16, in which this vulnerability was shadow-patched
+by logic gates that include escaping single quotes and verifying that the
+"value" supplied by the "bank" key must be either "0" or "1", preventing the
+command injection in the /api/status/image endpoint's handler function,
+handler_status_image_patch function. Additionally, authentication logic has
+been updated to send the SHA256 hash of the concatenation of username, a single
+colon, and password instead of the password obfuscated-by-encryption. A similar
+exploit appears alongside this which targets a different handler and  works on
+the 1.00.16 (latest) firmware version.
+'''
 
 class colors:
     darkblue = "\033[38;5;18m"
