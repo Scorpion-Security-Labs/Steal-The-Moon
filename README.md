@@ -9,8 +9,6 @@ Additional vulnerabilities include:
  - Like the "bob" and "admin" passwords, the default Wi-Fi password is also generated- this time using only the serial number. `calculate_default_user_password.py` will calculate this when supplied only with the device's serial number. (Additionally, there appears to be a trivial relationship between the MAC address and serial number, meaning technically the default Wi-Fi password can be calculated from its default SSID, which includes the last three bytes of the MAC address. This has been tested on three "Bob" routers and one "Kevin" and found to hold across all.)
  - Configuration backups appear to be encrypted with the same static key across every device (verified by software reverse analysis and testing on the four exemplars mentioned above). Any device owner who has extracted this key can decrypt any configuration backup.
 
-David E. Baker
+---
 
-Principal Cybersecurity Consultant
-
-Scorpion Labs by K logix
+David E. Baker, Principal Cybersecurity Consultant at Scorpion Labs by K logix, 2026
