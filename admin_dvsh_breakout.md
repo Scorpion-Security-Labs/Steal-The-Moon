@@ -41,5 +41,6 @@ passwd stealthemoon;/bin/telnetd${PS4:1:2}-l${PS4:1:2}/bin/sh
 and two of (the same) password that meets the above criteria to launch a
 `telnet` server on `23/tcp`. (Do not use quotes around the second argument as
 the tokenizer in `dvsh` delivers the needed isolation.) After that just
-`telnet` in. Even if the SSH session used the `admin` user, the `dvmgmt`
-process runs as `root`, so the device has been owwned.
+`telnet` in. Even if the SSH session used the `admin` user, the command is
+actually dispatched to the `dvmgmt` process, which runs as `root`, so the device
+has been owwned.
