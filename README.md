@@ -9,3 +9,8 @@ Additional vulnerabilities include:
  - Firmware v1.00.16: the credential material used to authenticate is the username concatenated with a colon (":") then a password. Because there is no challenge/nonce acting as a salt, an attacker who can eavesdrop on this exchange can replay the credential material for login tokens until the password is changed.
  - The public and private keys used to encrypt SSL/TLS appear to be the same across all devices and maintain across firmware updates. Because these are encrypted using RSA, there is no perfect forward secrecy and any attacker who has extracted these keys can decrypt the login exchange when it is made over TLS.
  - Configuration backups are encrypted with the same static key across any device. Any owner who has extracted this key can decrypt any configuration backup.
+
+
+David E. Baker
+Principal Cybersecurity Consultant
+Scorpion Labs by K logix
