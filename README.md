@@ -10,5 +10,7 @@ Additional vulnerabilities include:
  - Configuration backups appear to be encrypted with the same static key across every device (verified by software reverse analysis and testing on the four exemplars mentioned above). Any device owner who has extracted this key can decrypt any configuration backup.
 
 David E. Baker
+
 Principal Cybersecurity Consultant
+
 Scorpion Labs by K logix
